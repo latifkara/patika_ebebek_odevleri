@@ -5,7 +5,7 @@ public class Employee {
     int hireYear;
     int bouns;
     int year;
-
+    // Declaring all variables with the constructor method
     Employee(String name, int salary, int workHours, int hireYear) {
         this.name = name;
         this.salary = salary;
@@ -14,7 +14,7 @@ public class Employee {
         this.bouns = 0;
         this.year = 2021;
     }
-
+    // Method for calculating the tax on salary.
     double tax()
     {
         if (this.salary > 1000) {
@@ -23,6 +23,8 @@ public class Employee {
         }
             return this.salary;
     }
+    // If the employee has worked more than 40 hours a week,
+    // employee will calculate bonus wages of 30 TL per hour of extra work.
     double bonus()
     {
         if (this.workHours > 40)
@@ -32,7 +34,7 @@ public class Employee {
         }
         return this.bouns;
     }
-
+    // Method for calculating salary increase based on employee's employment year.
     double raiseSalary()
     {
         if ((this.year - hireYear) < 10)
@@ -48,7 +50,7 @@ public class Employee {
         }
         return this.salary;
     }
-
+    // prints all values to the screen.
     void printEmployee() {
         System.out.println("------------------------------");
         System.out.println("Adı : " + this.name);
